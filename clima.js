@@ -9,14 +9,15 @@ const units = "metric";
 const lang = "pt_BR";
 //quantidade de resultados
 const cnt = "10";
-const url = `https://api.openweathermap.org/data/2.5/foreccast?q=${q}&units=${units}&appid=${appid}&lang=${langc}&cnt=${cnt}`;
+const url = `https://api.openweathermap.org/data/2.5/forecast?q=${q}&units=${units}&appid=${appid}&lang=${lang}&cnt=${cnt}`;
+
+console.log(url);
 
 //faz a requisição
 axios
   .get(url)
   .then((res) => {
-    //mostra o resultado e devolve somente a parte de
-    interesse;
+    //mostra o resultado e devolve somente a parte de interesse
     console.log(res);
     return res.data;
   })
